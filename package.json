@@ -9,14 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.2.9",
-    "eslint-config-airbnb": "^19.0.4",
-    "framer-motion": "^11.0.6",
+    "deepmerge": "^4.3.1",
     "next": "14.1.0",
-    "prettier": "^3.2.5",
     "react": "^18",
-    "react-dom": "^18",
-    "styled-components": "^6.1.8"
+    "react-aria-components": "^1.1.1",
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -25,9 +22,12 @@
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8",
-    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-hardcore": "^45.3.0",
     "eslint-config-next": "14.1.0",
-    "tailwindcss": "^3.4.1",
+    "eslint-plugin-boundaries": "^4.2.0",
+    "eslint-plugin-nested-if": "^1.0.0",
+    "eslint-plugin-unused-imports": "^3.1.0",
+    "prettier": "^3.2.5",
     "typescript": "^5"
   }
 }
