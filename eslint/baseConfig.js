@@ -1,4 +1,3 @@
-const prettierConfig = require('../.prettierrc')
 const typeScriptRules = require('./rulesets/typeScriptRules')
 
 module.exports = {
@@ -27,25 +26,19 @@ module.exports = {
     'func-style': ['error', 'expression'],
     'putout/putout': 'off',
     'ext/lines-between-object-properties': ['error', 'never'],
-    'max-len': [
-      'error',
-      {
-        code: prettierConfig.printWidth,
-        comments: prettierConfig.printWidth + 40,
-        ignoreUrls: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals: true,
-      },
-    ],
     'nested-if/nested-if-statements': ['error', 2],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
-    'import/extensions': [
-      'error',
-      'never',
-    ],
+    'import/extensions': ['error', 'never'],
+    'import/exports-last': 'off',
     'perfectionist/sort-objects': 'off',
+    'no-multiple-empty-lines': ['error', { max: 1 }],
+    '@typescript-eslint/no-use-before-define': ["error", {
+      "functions": true,
+      "classes": true,
+      "variables": false,
+      "allowNamedExports": false
+    }],
     ...typeScriptRules,
   },
 }

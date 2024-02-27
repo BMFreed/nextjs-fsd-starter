@@ -4,7 +4,7 @@ module.exports = {
       'error',
       {
         unusedExports: true,
-        ignoreExports: ['./next.config.ts', 'src/app/**'],
+        ignoreExports: ['./next.config.*', 'src/app/**'],
       },
     ],
   },
@@ -25,6 +25,8 @@ module.exports = {
         ],
         'total-functions/no-unsafe-readonly-mutable-assignment': 'off',
         'react/require-default-props': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'jsx-quotes': ['error', 'prefer-single'],
       },
     },
   ],
