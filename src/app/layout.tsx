@@ -1,6 +1,11 @@
+import 'primereact/resources/themes/lara-light-cyan/theme.css'
+
 import { Metadata } from 'next'
+import Head from 'next/head'
+import { PrimeReactProvider } from 'primereact/api'
 import { FC, PropsWithChildren, useMemo } from 'react'
-import { NextAppDirEmotionCacheProvider } from 'tss-react/next/appDir'
+
+import StyledComponentsProvider from '@/app/providers/StyledComponentsProvider'
 
 export const metadata: Metadata = {
   description: 'Корпоративный стартер для проекта на NextJS',
@@ -8,19 +13,19 @@ export const metadata: Metadata = {
 }
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
-  const options = useMemo(() => {
-    return { key: 'css' }
+  const value = useMemo(() => {
+    return { ripple: true }
   }, [])
 
   return (
     <html lang='ru'>
-      <head>
+      <Head>
         <title>{metadata.title as string}</title>
-      </head>
+      </Head>
       <body>
-        <NextAppDirEmotionCacheProvider options={options}>
-          {children}
-        </NextAppDirEmotionCacheProvider>
+        <StyledComponentsProvider>
+          <PrimeReactProvider value={value}>{children}</PrimeReactProvider>
+        </StyledComponentsProvider>
       </body>
     </html>
   )

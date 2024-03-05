@@ -2,7 +2,7 @@
 
 Репозиторий-стартер для разработки приложения любой сложности на [Next.js](https://nextjs.org/). 
 Инициализирован через [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app),
-в комплекте с [TSS](https://www.tss-react.dev/) и MUI(https://mui.com/).
+в комплекте со [Styled-Components](https://styled-components.com/) и [PrimeReact](https://primereact.org/installation/).
 
 ## Архитектура и code-style
 

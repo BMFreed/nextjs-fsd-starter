@@ -5,13 +5,13 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: ['nested-if'],
+  plugins: ['nested-if', 'prettier'],
   extends: [
+    'next',
     'hardcore',
     'hardcore/ts',
     'hardcore/react',
     'hardcore/react-performance',
-    'next',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -21,6 +21,7 @@ module.exports = {
   },
   ignorePatterns: ['.*rc.js', 'eslint/**'],
   rules: {
+    'prettier/prettier': 'error',
     quotes: ['error', 'single'],
     'arrow-body-style': ['error', 'always'],
     'func-style': ['error', 'expression'],
@@ -31,14 +32,28 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/extensions': ['error', 'never'],
     'import/exports-last': 'off',
+    'import/no-named-as-default': 'off',
     'perfectionist/sort-objects': 'off',
+    //Вызывает ошибки в IDE. Включено в отдельном конфиге.
+    'import/no-unused-modules': 'off',
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        allowList: {
+          args: true,
+          props: true,
+          Props: true,
+          params: true,
+          Params: true,
+          ref: true,
+          Ref: true,
+        },
+        ignore: ['\\.e2e$', '\\.e2e-spec$'],
+        checkShorthandProperties: true,
+      },
+    ],
     'no-multiple-empty-lines': ['error', { max: 1 }],
-    '@typescript-eslint/no-use-before-define': ["error", {
-      "functions": true,
-      "classes": true,
-      "variables": false,
-      "allowNamedExports": false
-    }],
+    'react/forbid-component-props': 'off',
     ...typeScriptRules,
   },
 }

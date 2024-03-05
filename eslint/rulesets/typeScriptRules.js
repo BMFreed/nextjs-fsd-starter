@@ -1,4 +1,10 @@
 module.exports = {
+  '@typescript-eslint/no-use-before-define': ["error", {
+    "functions": true,
+    "classes": true,
+    "variables": false,
+    "allowNamedExports": false
+  }],
   '@typescript-eslint/explicit-function-return-type': 'error',
   // Дальше переопределяем правила из config-hardcore
   '@typescript-eslint/quotes': 'off',
