@@ -1,3 +1,4 @@
+import '@/shared/lib/styles/globals.css'
 import 'primereact/resources/themes/lara-light-cyan/theme.css'
 
 import { Metadata } from 'next'

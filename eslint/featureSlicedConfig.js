@@ -46,7 +46,8 @@ module.exports = {
       {
         patterns: [
           // У всех паттернов кроме pages и app уровень +1, т.к. мы можем захотеть сгруппировать те или иные сущности.
-          // Рекомендуется, например, entities для конкретной страницы и shared enitites
+          // Рекомендуется группировать сущности по признаку связанности с тем или иным процессом.
+          // Например - entities/database и entities/basket
           {
             message:
               'Private imports are prohibited, use public imports instead',
