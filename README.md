@@ -7,9 +7,9 @@
 ## Архитектура и code-style
 
 Линтер настроен на строгое соблюдение методологии [Feature-Sliced Design](https://feature-sliced.design/).
-Также при конфигурации TSC и ESLint делался упор на максимальную строгость. За основу кнофига для ESLint взят 
-[eslint-config-hardcore](https://github.com/EvgenyOrekhov/eslint-config-hardcore), но многие правила, касающиеся именно стиля кода
-обоснованны, в основном, устоявшимися практиками на рабочих проектах.
+Также при конфигурации TSC и ESLint делался упор на максимальную строгость. За основу конфига для ESLint взят 
+[eslint-config-hardcore](https://github.com/EvgenyOrekhov/eslint-config-hardcore), правила которого переопределялись для
+большего соответствия устоявшимся рабочим практикам. 
 
 ## Запуск в режиме разработки
 
